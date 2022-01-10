@@ -28,7 +28,9 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
@@ -74,6 +76,24 @@
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
       }
+      @font-face {
+        font-family: Cocogoose;
+        src: url("https://cdn.shopify.com/s/files/1/0619/3404/3371/files/Cocogoose.ttf?v=1641305708") format("truetype"); 
+      
+      }
+      @font-face {
+        font-family: Cocogoose-light;
+        src: url("https://cdn.shopify.com/s/files/1/0619/3404/3371/files/Cocogoose_Pro_Light-trial.ttf?v=1641306482") format("truetype"); 
+      
+      }
+      @font-face {
+        font-family: SitkaText;
+        src: url("https://cdn.shopify.com/s/files/1/0619/3404/3371/files/sitka-small-599.ttf?v=1641459832") format("truetype"); 
+      
+      }
+      
+      
+
 
       *,
       *::before,
@@ -125,6 +145,7 @@
     if (Shopify.designMode) {
       document.documentElement.classList.add('shopify-design-mode');
     }
+   
     </script>
   </head>
 
@@ -132,8 +153,6 @@
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
-
-    {% section 'announcement-bar' %}
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -171,6 +190,9 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       }
+
+     
+  
     </script>
 
     {%- if settings.predictive_search_enabled -%}
