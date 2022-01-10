@@ -16,6 +16,7 @@
   padding-bottom: 0;
 }
 
+
 @media screen and (max-width: 749px) {
   .product-section {
     margin-top: 0;
@@ -1066,4 +1067,73 @@ a.product__text {
   content: "";
   display: block;
   padding-bottom: 100%;
+}
+.thumbnail[aria-current] {
+  border: dotted 3px #0aa1bc;
+}
+.product__title{
+  font-family: Cocogoose;
+  font-size: 35px;
+  color: #000;
+}
+.product--price{
+  font-family: SitkaText;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  color: #000;
+}
+.product-page-quantity{
+  border: none;
+}
+.product-page-quantity .product-page-quantity-button{
+  border: solid 2px #eaeaea;
+}
+.product-page-quantity__input{
+  border-top: solid 2px #eaeaea;
+  border-bottom: solid 2px #eaeaea;
+  width: 100px;
+}
+.product-page-submit-btn{
+
+  background-color: #0aa1bc;
+  box-shadow: none;
+  font-family: Cocogoose;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  color: #fff;
+  padding: 14px 48px;
+}
+share-button .fa-share-alt, .fa-heart{
+  padding: 10px 10.5px 9.7px 11px;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 8%);
+  border-radius: 50%;
+  text-decoration: none;
+}
+.product-page-share-btn{
+  display: inline-block;
+}
+.product-page-share-btn:hover{
+
+text-decoration: none;}
+.product-feature-seprator{
+  width: 230px;
+}
+.product-page-product-description{
+  font-family: Cocogoose;
+  font-size: 14px;
+  color: #000;
+}
+.product-featured-heading{
+  font-family: Cocogoose;
+  font-size: 20px;
+  color: #000;
+}
+
+
+
+@media screen  and (max-width:576px){
+  .product__title {
+    font-size: 24px;
+}
 }

@@ -2,7 +2,12 @@
   display: block;
 }
 
-.product-recommendations__heading {
+.product-recommendations__heading{
   margin: 0;
   margin-bottom: 3rem;
+  font-family: Cocogoose;
+font-size: 45px;
+letter-spacing: 4.5px;
+color: #000;
+text-align: center;
 }

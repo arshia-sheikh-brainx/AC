@@ -18,6 +18,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+{%- assign product-description-array = product.description | split: '===' -%}
 <section class="page-width">
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
@@ -183,12 +184,12 @@
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
-            <h1 class="product__title" {{ block.shopify_attributes }}>
+            <h1 class="product__title " {{ block.shopify_attributes }}>
               {{ product.title | escape }}
             </h1>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large product--price' -%}
             </div>
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product__tax caption rte">
@@ -208,8 +209,12 @@
             </div>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
-              <div class="product__description rte">
-                {{ product.description }}
+              <div class="product__description product-page-product-description  rte">
+                <hr class="product-feature-seprator">
+                <h2 class="product-featured-heading">
+                  <i class="fad fa-horizontal-rule"></i>  Product Features
+                </h2>
+                {{product-description-array[0] }}
               </div>
             {%- endif -%}
           {%- when 'custom_liquid' -%}
@@ -234,16 +239,12 @@
             </div>
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
-              <label class="form__label" for="Quantity-{{ section.id }}">
-                {{ 'products.product.quantity.label' | t }}
-              </label>
-
-              <quantity-input class="quantity">
-                <button class="quantity__button no-js-hidden" name="minus" type="button">
+              <quantity-input class="quantity product-page-quantity">
+                <button class="quantity__button no-js-hidden product-page-quantity-button" name="minus" type="button">
                   <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
                   {% render 'icon-minus' %}
                 </button>
-                <input class="quantity__input"
+                <input class="quantity__input product-page-quantity__input"
                     type="number"
                     name="quantity"
                     id="Quantity-{{ section.id }}"
@@ -251,7 +252,7 @@
                     value="1"
                     form="{{ product_form_id }}"
                   >
-                <button class="quantity__button no-js-hidden" name="plus" type="button">
+                <button class="quantity__button product-page-quantity-button no-js-hidden" name="plus" type="button">
                   <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
                   {% render 'icon-plus' %}
                 </button>
@@ -263,14 +264,14 @@
               </modal-opener>
               <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">{{ block.settings.text }}</a>
           {%- when 'share' -%}
-            <share-button id="Share-{{ section.id }}" class="share-button" {{ block.shopify_attributes }}>
+            <share-button id="Share-{{ section.id }}" class="share-button product-page-share-btn" {{ block.shopify_attributes }}>
               <button class="share-button__button hidden">
-                {% render 'icon-share' %}
+                <i class="far fa-share-alt"></i>&nbsp;  
                 {{ block.settings.share_label | escape }}
               </button>
               <details id="Details-{{ block.id }}-{{ section.id }}">
                 <summary class="share-button__button">
-                  {% render 'icon-share' %}
+                  <i class="far fa-share-alt"></i> &nbsp;
                   {{ block.settings.share_label | escape }}
                 </summary>
                 <div id="Product-share-{{ section.id }}" class="share-button__fallback motion-reduce">
@@ -298,6 +299,7 @@
                 </div>
               </details>
             </share-button>
+            <i class="fas fa-heart"></i>
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
@@ -394,7 +396,7 @@
                     <button
                       type="submit"
                       name="add"
-                      class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                      class="product-form__submit button product-page-submit-btn  {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
                         <span>
@@ -462,6 +464,7 @@
                 <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}</span>
               </p>
             {%- endif -%}
+
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -780,6 +783,7 @@
           "id": "page",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
         },
+        
         {
           "type": "select",
           "id": "icon",
