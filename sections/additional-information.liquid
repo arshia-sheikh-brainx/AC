@@ -1,0 +1,117 @@
+{%- assign product-description-array = product.description | split: '===' -%}
+
+<style>
+/* Style the tab */
+.addition-info-section{
+max-width: 1200px;
+margin: 10rem auto;
+}
+.tab-list{
+    display: flex;
+    justify-content: center;
+}
+.tab-links{
+    font-family: Cocogoose;
+  font-size: 20px;
+  text-align: center;
+  color: #5c5c5c;
+  border:none;
+  background-color: #fff;
+  padding: 20px 70px;
+}
+.tab-links.active{
+border-bottom:solid 2px #0aa1bc;
+color: #000;
+
+}
+.tab-content{
+    padding: 50px 0;
+    text-align: center;
+    display: none;
+}
+
+
+@media screen and (max-width:1040px) {
+    .tab-links {
+    font-size: 15px;
+    padding: 20px 47px;
+}
+.tab-content{
+    padding: 30px 10px 0;
+}
+    
+}
+
+
+@media screen and (max-width: 547px)
+{
+.addition-info-section{
+margin: 3rem auto;
+}
+    .tab-links {
+    font-size: 12px;
+    padding: 10px 9px;
+}
+}
+
+</style>
+<div class="addition-info-section">
+    <div class="tab-list">
+        <button class="tab-links" onclick="openProductTab(event, 'product-discription-tab')" id="default-open">Discription</button>
+        <button class="tab-links" onclick="openProductTab(event, 'product-info-tab')">Additional information</button>
+        <button class="tab-links" onclick="openProductTab(event, 'product-review-tab')">Reviews</button>
+      </div>
+      
+      <div id="product-discription-tab" class="tab-content">
+      <div class="addtional-information-product-description">
+          {{product-description-array[1]}}
+      </div>
+      </div>
+      
+      <div id="product-info-tab" class="tab-content">
+          {{product-description-array[2]}}
+        
+      </div>
+      
+      <div id="product-review-tab" class="tab-content">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+          {%- when '@app' -%}
+          {% render block %}
+          {%- endcase -%}
+          {%- endfor -%}
+      </div>
+</div>
+
+
+<script>
+function openProductTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab-links");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("default-open").click();
+</script>
+
+{% schema %}
+{
+    "name": "Additional Information",
+    "max_blocks":1,
+    "blocks": [
+      {
+        "type": "@app"
+      }
+      ]
+}
+{% endschema %}
+
