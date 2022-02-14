@@ -39,6 +39,7 @@ if (!customElements.get('product-form')) {
           }
 
           this.cartNotification.renderContents(response);
+          console.log(response)
         })
         .catch((e) => {
           console.error(e);

@@ -1,12 +1,10 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
-{{ 'custom-slideshow.css' | asset_url | stylesheet_tag }}
 
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
- 
   @media screen and (max-width: 749px) {
     #Slider-{{ section.id }}::before,
     #Slider-{{ section.id }} .media::before,
@@ -15,8 +13,8 @@
       content: '';
       display: block;
     }
-
   }
+
   @media screen and (min-width: 750px) {
     #Slider-{{ section.id }}::before,
     #Slider-{{ section.id }} .media::before {
@@ -77,29 +75,18 @@
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box color-{{ block.settings.color_scheme }} slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner-heading banner__heading{% if block.settings.heading_size == 'medium' %} h1{% elsif block.settings.heading_size == 'large' %} h0{% endif %}">{{ block.settings.heading | escape }}</h2>
+              <h2 class="banner__heading{% if block.settings.heading_size == 'medium' %} h1{% elsif block.settings.heading_size == 'large' %} h0{% endif %}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
               <div class="banner__text" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
-            {%- if block.settings.subtext != blank -%}
-            <div class="banner__sub_text" {{ block.shopify_attributes }}>
-            {{ block.settings.subtext }}
-            </div>
-          {%- endif -%}
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
-                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_fill %}fill-button{% elsif block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               </div>
             {%- endif -%}
-            {%- if block.settings.banner_bottom_text != blank -%}
-            <div class="banner__bottom_text " {{ block.shopify_attributes }}>
-              <span>{{ block.settings.banner_bottom_text | escape }}</span>
-            </div>
-            {%- endif -%}
-
           </div>
         </div>
       </div>
@@ -303,17 +290,6 @@
         },
         {
           "type": "text",
-          "id": "banner_bottom_text",
-          "default": "Tell your brand's story through images",
-          "label": "Banner Bottom Text"
-        },
-        {
-          "type": "html",
-          "id": "subtext",
-          "label": "Banner Text"
-        },
-        {
-          "type": "text",
           "id": "button_label",
           "default": "Button label",
           "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
@@ -330,13 +306,6 @@
           "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
           "default": false
         },
-        {
-          "type": "checkbox",
-          "id": "button_style_fill",
-          "label": "Fill Button",
-          "default": true
-        },
-        
         {
           "type": "select",
           "id": "box_align",
@@ -476,7 +445,6 @@
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
         }
       ],
-      
       "limit": 5
     }
   ],

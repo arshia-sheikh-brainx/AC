@@ -1,8 +1,82 @@
-.product-recommendations {
+product-recommendations {
   display: block;
 }
 
-.product-recommendations__heading {
+.product-recommendations__heading{
   margin: 0;
   margin-bottom: 3rem;
+  font-family: Cocogoose;
+font-size: 45px;
+letter-spacing: 4.5px;
+color: #000;
+text-align: center;
+}
+product-recommendations .card-information__text {
+  font-family: Cocogoose;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #000;
+}
+product-recommendations  .price {
+  font-family: SitkaText;
+  font-size: 19px;
+  font-weight: bold;
+  color: #000;
+  justify-content: center;
+}
+product-recommendations .card__bottom {
+    order: 1;
+    text-align: center;
+    margin: 10px auto;
+    z-index: 2;
+    
+}
+product-recommendations .card-add-to-cart-btn {
+  padding: 18.1px 73.1px 14px 67.1px;
+  background-color: #0aa1bc;
+  border: none;
+  font-family: Cocogoose;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  product-recommendations {
+    padding: 0;
+  }
+  product-recommendations .card-information__text {
+    font-size: 10px !important;
+    line-height: 15px !important;
+  }
+  product-recommendations .price {
+    font-size: 12px !important;
+  }
+  .card-add-to-cart-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  product-recommendations .card.card--product {
+    max-height: 100px;
+  }
+  product-recommendations .card-information__wrapper {
+    min-height: 55px;
+  }
+  product-recommendations .card__bottom {
+    margin: 0;
+  }
+  product-recommendations .card__media-full-spacer {
+     padding: 0; 
+}
+product-recommendations .card-add-to-cart-btn {
+  padding: 5px 10px;
+  font-size: 10px;
+}
+.product-recommendations__heading
+{
+  font-size: 20px;
+    letter-spacing: normal;
+    color: #000;
+}
 }

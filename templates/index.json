@@ -1,1 +1,272 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Talk about your brand"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_label_2":""}}},"block_order":["heading","button"],"settings":{"desktop_content_position":"middle-center"}},"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{}},"text":{"type":"text","settings":{}},"button":{"type":"button","settings":{}}},"block_order":["heading","text","button"],"settings":{}},"featured_products":{"type":"featured-collection","settings":{"title":"Featured products","collection":"all","image_ratio":"square"}},"collage":{"type":"collage","blocks":{"video":{"type":"video","settings":{}},"product":{"type":"product","settings":{}},"collection":{"type":"collection","settings":{}}},"block_order":["video","product","collection"],"settings":{}},"video":{"type":"video","settings":{}},"multi_column":{"type":"multicolumn","blocks":{"column1":{"type":"column","settings":{}},"column2":{"type":"column","settings":{}},"column3":{"type":"column","settings":{}}},"block_order":["column1","column2","column3"],"settings":{}}},"order":["image_banner","rich_text","featured_products","collage","video","multi_column"]}
+{
+  "sections": {
+    "1641904826c40f783c": {
+      "type": "slideshow",
+      "blocks": {
+        "1641904826103133ab-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/improve-efficiency-air-conditioner-1.jpg",
+            "heading": "DC INVERTER",
+            "heading_size": "medium",
+            "subheading": "Ice Energy",
+            "banner_bottom_text": "We welcome you to the world of limitless appliances that are ready to adore your home & workplace with their existence. Orient strives to make your  life simpler & luxurious with their state-of-the-art innovative electronics. Our home appliances are designed and engineered in accordance with the  on-going trends and environment of Pakistan",
+            "subtext": "$500",
+            "button_label": "Button label",
+            "link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "button_style_fill": true,
+            "box_align": "bottom-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "transparent",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "1641904826103133ab-1": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "medium",
+            "subheading": "Tell your brand's story through images",
+            "banner_bottom_text": "Tell your brand's story through images",
+            "subtext": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "button_style_fill": true,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "abbe002a-4fb5-47da-8d53-64a8b77715bb": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "medium",
+            "subheading": "Tell your brand's story through images",
+            "banner_bottom_text": "Tell your brand's story through images",
+            "subtext": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "button_style_fill": true,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "bb07a23f-c5c3-4371-a70a-ea1a0dcd2873": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "medium",
+            "subheading": "Tell your brand's story through images",
+            "banner_bottom_text": "Tell your brand's story through images",
+            "subtext": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "button_style_fill": true,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "58544c9a-d734-4725-a068-34f98f624cf3": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "medium",
+            "subheading": "Tell your brand's story through images",
+            "banner_bottom_text": "Tell your brand's story through images",
+            "subtext": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "button_style_fill": true,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1641904826103133ab-0",
+        "1641904826103133ab-1",
+        "abbe002a-4fb5-47da-8d53-64a8b77715bb",
+        "bb07a23f-c5c3-4371-a70a-ea1a0dcd2873",
+        "58544c9a-d734-4725-a068-34f98f624cf3"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "16419031738714f6ea": {
+      "type": "featured-product",
+      "blocks": {
+        "164190317217dc18f6-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "164190317217dc18f6-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "164190317217dc18f6-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "164190317217dc18f6-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "164190317217dc18f6-5": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "164190317217dc18f6-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        }
+      },
+      "block_order": [
+        "164190317217dc18f6-1",
+        "164190317217dc18f6-2",
+        "164190317217dc18f6-3",
+        "164190317217dc18f6-4",
+        "164190317217dc18f6-5",
+        "164190317217dc18f6-6"
+      ],
+      "settings": {
+        "product": "copy-of-dc-inverter",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "featured-product-heading": "Best Sell"
+      }
+    },
+    "1641903162e3bade48": {
+      "type": "custom-featured-collection-section",
+      "blocks": {
+        "1641903162f059e7ec-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "ac"
+          }
+        }
+      },
+      "block_order": [
+        "1641903162f059e7ec-0"
+      ],
+      "settings": {
+        "title": "Featured collection",
+        "products_to_show": 3,
+        "show_view_all": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "1641903261fb4eaddf": {
+      "type": "image-banner",
+      "blocks": {
+        "1641903261fe033bb9-0": {
+          "type": "text",
+          "settings": {
+            "text": "We welcome you to the world of limitless appliances that are ready to adore your home & workplace with their existence. Orient strives to make your life simpler & luxurious with their state-of-the-art innovative electronics. Our home appliances are designed and engineered in accordance with the",
+            "text_style": "body",
+            "banner__text_color": "#ffffff"
+          }
+        },
+        "efb12247-b4a7-4f6f-981e-4ce2d38e6ca8": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1641903261fe033bb9-0",
+        "efb12247-b4a7-4f6f-981e-4ce2d38e6ca8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pexels-victoria-borodinova-1648776.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "transparent",
+        "mobile_content_alignment": "center"
+      }
+    },
+    "16419034239eb093ba": {
+      "type": "apps",
+      "blocks": {
+        "e94f0f07-4bf3-42e3-85bf-f559a4179e82": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "heading_font": "helvetica_n4",
+            "heading_size": 20,
+            "feed_width": 100,
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "e94f0f07-4bf3-42e3-85bf-f559a4179e82"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "1641904826c40f783c",
+    "16419031738714f6ea",
+    "1641903162e3bade48",
+    "1641903261fb4eaddf",
+    "16419034239eb093ba"
+  ]
+}
