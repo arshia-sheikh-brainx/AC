@@ -3,16 +3,60 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "products_per_page": 16,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false
+      }
+    },
+    "1646203134154e2780": {
+      "type": "newsletter",
+      "blocks": {
+        "16462031345d602e03-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails"
+          }
+        },
+        "16462031345d602e03-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "16462031345d602e03-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "16462031345d602e03-0",
+        "16462031345d602e03-1",
+        "16462031345d602e03-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "1646203134154e2780"
   ]
 }
